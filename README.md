@@ -19,11 +19,6 @@ Software engineer on human-rated launch control systems at NASA Kennedy Space Ce
 - **[XNA-on-Apple-Silicon Keyboard Fix](https://github.com/brandonmrgich/castleminerz-mac-tools)** — Root-caused a dead-keyboard bug affecting a whole class of XNA-era Windows games running on FNA under Wine on Apple Silicon.
 - **[BrainBeatsV4](https://github.com/Brainbeats-v4)** — EEG-to-MIDI web application — record music with your brain.
 
-### Upstream issues filed
-
-- [FNA-XNA/FNA#671](https://github.com/FNA-XNA/FNA/issues/671) — Dead keyboard when a game inits Mono WinForms in-process (SDL focus desync); window-creation crash on FNA 25.11+
-- [wine-mono/wine-mono#230](https://github.com/wine-mono/wine-mono/issues/230) — In-process System.Windows.Forms desyncs SDL/FNA input focus (dead keyboard); FNA 25.x window-creation crash on 10.4+
-
 ### Public repositories
 
 - **[dotfiles](https://github.com/brandonmrgich/dotfiles)** — GNU Stow-managed dotfiles — zsh, tmux, git, and starship config kept in one tracked tree.
