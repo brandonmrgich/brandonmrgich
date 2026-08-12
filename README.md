@@ -16,7 +16,6 @@ Software engineer on human-rated launch control systems at NASA Kennedy Space Ce
 - **bam-claude** *(private source)* — AI agent orchestration and developer tooling system.
 - **Ephemeral CI Runners** *(private source)* — Self-hosted GitHub Actions runners — one disposable container per job.
 - **Unity Audio Engine** *(private source)* — Configuration-driven music and SFX engine for Unity 2D — playback behavior authored as data, not code.
-- **[XNA-on-Apple-Silicon Keyboard Fix](https://github.com/brandonmrgich/castleminerz-mac-tools)** — Root-caused a dead-keyboard bug affecting a whole class of XNA-era Windows games running on FNA under Wine on Apple Silicon.
 - **[BrainBeatsV4](https://github.com/Brainbeats-v4)** — EEG-to-MIDI web application — record music with your brain.
 
 ### Public repositories
