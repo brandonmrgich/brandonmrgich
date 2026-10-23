@@ -4,9 +4,9 @@
 
 ## Brandon Mrgich
 
-**Launch Control Systems (LCS) Software Engineer** · Amentum at NASA Kennedy Space Center
+**Launch Control Systems (LCS) Software Engineer** · NASA Kennedy Space Center
 
-Software engineer on human-rated launch control systems at NASA Kennedy Space Center — Java GUI platforms, deployment automation, and testing for safety-critical software. Off the clock, a production music catalog and streaming platform.
+Software engineer at NASA Kennedy Space Center with 3.5 years on the Artemis program — spanning internships, the COMET contract, and civil service — building human-rated launch control systems: Java GUI platforms, deployment automation, and testing for safety-critical software. Off the clock, a production music catalog and streaming platform.
 
 **Full portfolio → [dev.brandonmrgich.com](https://dev.brandonmrgich.com)**
 
