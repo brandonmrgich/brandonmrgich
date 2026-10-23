@@ -1,0 +1,51 @@
+# Regenerates README.md from brandonmrgich/dev-portfolio's data files so the profile
+# stays in step with the site — including figures computed at build time, like years
+# on the Artemis program. Uses this repo's own GITHUB_TOKEN; no PAT needed, since
+# dev-portfolio is public and the push targets this repository.
+name: Sync profile README
+
+on:
+  schedule:
+    # Mondays 06:30 UTC, just after dev-portfolio's weekly Pages rebuild.
+    - cron: '30 6 * * 1'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sync-profile
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/checkout@v4
+        with:
+          repository: brandonmrgich/dev-portfolio
+          path: .dev-portfolio
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      # build-profile.mjs uses only node built-ins and the repo's own src/, so no
+      # dependency install is needed.
+      - run: node .dev-portfolio/scripts/build-profile.mjs
+
+      - name: Commit if changed
+        run: |
+          cp .dev-portfolio/dist/PROFILE.md README.md
+          rm -rf .dev-portfolio
+          if git diff --quiet -- README.md; then
+            echo "README already up to date"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add README.md
+          git commit -m "Sync profile README from dev-portfolio"
+          git push
